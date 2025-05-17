@@ -91,9 +91,13 @@ WSGI_APPLICATION = "crm_project.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pixelforge_db',      # Replace with your DB name if different
+        'USER': 'pixelforge_user',  # Replace with your DB user if different
+        'PASSWORD': 'pixelforge_password', # Replace with your DB password
+        'HOST': 'db',             # This will be the service name in docker-compose.yml
+        'PORT': '5432',           # Default PostgreSQL port
     }
 }
 

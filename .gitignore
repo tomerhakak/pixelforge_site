@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+build/**
 develop-eggs/
 dist/
 downloads/
@@ -98,14 +99,14 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
+.env.venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
 */django_env/ # Added to cover the old venv name if it was inside backend
+backend/venv/ # Explicitly ignore the backend virtual environment
 
 # IDEs and editors
 .project
